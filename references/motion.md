@@ -1,4 +1,4 @@
-# Motion and interaction
+# Apple motion and interaction
 
 Use this reference for gestures, direct manipulation, transitions, sheets, carousels, and motion review. The physical interaction principles are retained from Apple's earlier fluid-interface guidance; apply them within the 2025–2026 content/UI-layer model.
 

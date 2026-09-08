@@ -80,7 +80,7 @@ Prefer distinctiveness from:
 
 Custom components require refinement. Spend that effort on the areas with the greatest product impact, and use standard components for utilitarian behavior.
 
-## 7. Counterfactual tests
+## 7. Design review questions
 
 1. If the logo, title, and accent color changed, could this become an unrelated app? If yes, make content expression and hierarchy more domain-specific.
 2. If blur, gradient, shadow, and mockup imagery disappeared, would the layout remain clear and distinctive? If no, repair structure first.

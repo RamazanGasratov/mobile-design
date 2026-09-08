@@ -1,6 +1,6 @@
 ---
 name: mobile-design
-description: Design, implement, or review distinctive mobile interfaces using platform-native patterns. Use for iOS, iPadOS, Apple-style mobile UI, Liquid Glass, mobile interaction, navigation, accessibility, responsive layouts, or requests to avoid generic AI-generated app design. Currently contains detailed Apple guidance and is structured for future Android guidance.
+description: Design, implement, or review distinctive platform-native mobile interfaces. Use for iOS, iPadOS, Android, Apple-style UI, Liquid Glass, Material 3 Expressive, SwiftUI, UIKit, Jetpack Compose, mobile interaction, navigation, accessibility, adaptive layouts, or requests to avoid generic AI-generated app design.
 ---
 
 # Mobile Design
@@ -14,9 +14,16 @@ Identify the target before making visual decisions.
 - For iOS or iPadOS work, read [references/apple-platform.md](references/apple-platform.md).
 - When Liquid Glass is requested, visible in a reference, or available in the target SDK, also read [references/liquid-glass.md](references/liquid-glass.md).
 - When creating or substantially redesigning a screen, read [references/anti-template.md](references/anti-template.md).
-- For gesture-driven UI, transitions, sheets, carousels, or motion review, read [references/motion.md](references/motion.md).
+- For iOS or iPadOS gesture-driven UI, transitions, sheets, carousels, or motion review, read [references/motion.md](references/motion.md).
 - For SwiftUI, UIKit, or a web prototype of an Apple interface, read [references/apple-implementation.md](references/apple-implementation.md).
-- Android-specific guidance is intentionally not included yet. If the target is Android, preserve the shared principles here, inspect the project's existing design system, and state that the platform reference still needs to be added instead of pretending Apple conventions are Android conventions.
+- For any Android task, read [references/android/foundations.md](references/android/foundations.md).
+- For Android visual language, theming, or brand expression, read [references/android/material3-expressive.md](references/android/material3-expressive.md).
+- When choosing or reviewing Android controls and surfaces, read [references/android/components.md](references/android/components.md).
+- For tablets, foldables, landscape, multi-window, desktop windowing, or responsive behavior, read [references/android/adaptive-layout.md](references/android/adaptive-layout.md).
+- For Android app navigation, system bars, edge-to-edge, or back behavior, read [references/android/navigation.md](references/android/navigation.md).
+- For Android accessibility work or custom controls, read [references/android/accessibility.md](references/android/accessibility.md).
+- For Android transitions, gesture feedback, or expressive motion, read [references/android/motion.md](references/android/motion.md).
+- For Jetpack Compose implementation, read [references/android/compose-implementation.md](references/android/compose-implementation.md).
 
 If no platform is stated, infer it only from strong evidence such as repository technology, supplied screenshots, or device context. Otherwise state the platform assumption explicitly or ask when choosing the wrong platform would materially change the result.
 
@@ -78,6 +85,7 @@ Before finishing, verify:
 - Do not hide core actions behind novelty gestures without a visible or conventional alternative.
 - Do not hardcode a single phone size. Respect safe areas, resizing, orientation, and text expansion.
 - Do not claim a CSS blur or custom shader is Apple's Liquid Glass. Call it an approximation.
+- Do not apply Apple navigation, Liquid Glass, 44-point targets, or iOS presentation behavior to Android. Use Android system behavior, Material guidance, and 48dp targets.
 - Do not invent current platform APIs. Check the installed SDK or current official documentation when implementation accuracy matters.
 
 ## Deliverable standard

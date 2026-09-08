@@ -2,7 +2,9 @@
 
 An independent Codex skill for designing, implementing, and reviewing distinctive platform-native mobile interfaces.
 
-The current release focuses on Apple platforms and incorporates Apple's design guidance from WWDC25, the maintained Human Interface Guidelines, and WWDC26. It covers:
+The current release covers Apple and Android platforms. Apple guidance is based on WWDC25, the maintained Human Interface Guidelines, and WWDC26. Android guidance is based on the maintained Android Design portal, Material 3 Expressive, adaptive app guidance, and current Compose Material 3 documentation.
+
+Apple coverage includes:
 
 - iOS and iPadOS information architecture and interaction;
 - the eight Apple design principles introduced in the 2026 HIG;
@@ -11,14 +13,22 @@ The current release focuses on Apple platforms and incorporates Apple's design g
 - direct manipulation, interruptible motion, momentum, and accessibility;
 - SwiftUI, UIKit, and web prototypes of Apple-style interfaces.
 
-The skill is structured so Android guidance can be added later without mixing Apple and Android conventions.
+Android coverage includes:
+
+- Material 3 and Material 3 Expressive visual systems;
+- Android-native components, navigation, predictive back, and edge-to-edge layout;
+- adaptive layouts for phones, tablets, foldables, and resizable windows;
+- accessibility and input beyond touch;
+- motion principles and Jetpack Compose implementation guidance.
+
+Platform files remain separate so the agent never substitutes Apple conventions for Android conventions.
 
 ## Install
 
 Clone the repository into your Codex skills directory:
 
 ```bash
-git clone <repository-url> ~/.codex/skills/mobile-design
+git clone https://github.com/RamazanGasratov/mobile-design.git ~/.codex/skills/mobile-design
 ```
 
 Restart or reload Codex if the skill does not appear immediately. Invoke it explicitly with `$mobile-design`, or let Codex select it automatically for relevant mobile design tasks.
@@ -34,23 +44,28 @@ mobile-design/
     ├── anti-template.md
     ├── apple-implementation.md
     ├── apple-platform.md
+    ├── android/
+    │   ├── accessibility.md
+    │   ├── adaptive-layout.md
+    │   ├── components.md
+    │   ├── compose-implementation.md
+    │   ├── foundations.md
+    │   ├── material3-expressive.md
+    │   ├── motion.md
+    │   └── navigation.md
     ├── liquid-glass.md
     └── motion.md
 ```
 
-`SKILL.md` contains the shared workflow and routes the agent to focused references only when they apply. This keeps Apple principles, Liquid Glass, anti-template checks, motion, and implementation guidance separate instead of loading one unstructured wall of instructions.
-
-## Add Android guidance
-
-Add `references/android-platform.md` and, if necessary, `references/android-implementation.md`. Then update the routing section and frontmatter description in `SKILL.md`.
-
-Keep shared product-specificity and accessibility guidance in `SKILL.md`. Keep Material Design and Android-specific patterns in the Android references so the agent never substitutes Apple conventions for Android conventions.
+`SKILL.md` contains the shared workflow and routes the agent to focused references only when they apply. Apple principles, Android principles, platform materials, anti-template guidance, motion, accessibility, adaptive layout, and implementation remain separate instead of loading one unstructured wall of instructions.
 
 ## Sources and independence
 
-This is an independent project and is not affiliated with or endorsed by Apple Inc. Apple-platform guidance is summarized from public Apple Human Interface Guidelines, Apple Developer documentation, and WWDC sessions linked from the reference files.
+This is an independent project and is not affiliated with or endorsed by Apple Inc. or Google LLC. Platform guidance is summarized from public Apple and Google design and developer documentation linked from the reference files.
 
 Apple, iOS, iPadOS, SwiftUI, and Liquid Glass are trademarks or terms associated with Apple Inc.
+
+Android, Jetpack Compose, Material Design, and Material 3 are trademarks or terms associated with Google LLC.
 
 ## License
 
