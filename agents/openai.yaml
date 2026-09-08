@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mobile Design"
+  short_description: "Design distinctive platform-native mobile UI"
+  default_prompt: "Use $mobile-design to design or review this mobile interface for its target platform."
