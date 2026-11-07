@@ -1,6 +1,6 @@
 # Mobile Design
 
-A Codex skill for designing, implementing, and reviewing distinctive platform-native mobile interfaces for Apple and Android platforms.
+A Codex skill for designing, implementing, polishing, and reviewing distinctive platform-native mobile interfaces for Apple and Android platforms.
 
 `mobile-design` helps an AI agent avoid two common failures: copying one platform's conventions onto another and producing generic layouts made from interchangeable cards, gradients, pills, and floating controls. It starts from the product's real content and task, then applies the appropriate platform guidance.
 
@@ -25,6 +25,18 @@ Shared guidance keeps the result specific to the product rather than a reusable 
 - Material 3 Expressive uses color, shape, size, motion, typography, and containment with purpose; expressive does not automatically mean loud.
 - Native components are the starting point, not a limit on product identity.
 - Accessibility, adaptivity, complete states, and reduced-motion behavior are part of the design.
+- Existing screens receive changes proportional to observed problems: preserve coherent work, correct local inconsistencies, and explain broader revisions before implementing them within the requested scope.
+
+## Polish an existing screen
+
+The skill can inspect an existing interface, identify concrete visual problems, and improve its reading order, spacing, emphasis, labels, and feedback. It preserves product meaning, established branding, and platform behavior, including native springs, scalable typography, semantic colors, and accessibility.
+
+```text
+$mobile-design Polish this iOS screen while preserving its navigation and brand.
+$mobile-design Review this Android screen's visual consistency and explain the smallest useful corrections.
+```
+
+Review requests produce findings. Implementation requests apply scoped improvements and compare equivalent states before and after, with limitations stated when native rendering or runtime checks are unavailable.
 
 ## Install
 
@@ -66,6 +78,7 @@ mobile-design/
     ├── apple-platform.md
     ├── liquid-glass.md
     ├── motion.md
+    ├── visual-polish.md
     └── android/
         ├── accessibility.md
         ├── adaptive-layout.md
