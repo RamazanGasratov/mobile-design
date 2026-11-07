@@ -1,6 +1,6 @@
 ---
 name: mobile-design
-description: Design, implement, or review distinctive platform-native mobile interfaces. Use for iOS, iPadOS, Android, Apple-style UI, Liquid Glass, Material 3 Expressive, SwiftUI, UIKit, Jetpack Compose, mobile interaction, navigation, accessibility, adaptive layouts, or requests to avoid generic AI-generated app design.
+description: Design, implement, polish, or review distinctive platform-native mobile interfaces. Use for iOS, iPadOS, Android, Apple-style UI, Liquid Glass, Material 3 Expressive, SwiftUI, UIKit, Jetpack Compose, mobile interaction, navigation, accessibility, adaptive layouts, or requests to improve an existing mobile screen or avoid generic AI-generated app design.
 ---
 
 # Mobile Design
@@ -14,6 +14,7 @@ Identify the target before making visual decisions.
 - For iOS or iPadOS work, read [references/apple-platform.md](references/apple-platform.md).
 - When Liquid Glass is requested, visible in a reference, or available in the target SDK, also read [references/liquid-glass.md](references/liquid-glass.md).
 - When creating or substantially redesigning a screen, read [references/anti-template.md](references/anti-template.md).
+- When polishing an existing mobile screen or reviewing visual inconsistency, read [references/visual-polish.md](references/visual-polish.md). Use the anti-template reference as well only when a broader redesign is warranted and within scope.
 - For iOS or iPadOS gesture-driven UI, transitions, sheets, carousels, or motion review, read [references/motion.md](references/motion.md).
 - For SwiftUI, UIKit, or a web prototype of an Apple interface, read [references/apple-implementation.md](references/apple-implementation.md).
 - For any Android task, read [references/android/foundations.md](references/android/foundations.md).
@@ -46,6 +47,8 @@ Do not invent a dashboard, card grid, hero section, or floating toolbar before t
 
 When working in an existing product, first inspect its components, tokens, navigation model, typography, icon system, platform APIs, and nearby screens. Reuse coherent foundations. Remove accidental inconsistency, but do not erase intentional brand character merely to make the result look more like a system demo.
 
+Match the intervention to the evidence. A coherent screen may need no change; an isolated defect calls for a local correction. Preserve the product's functions, content meaning, navigation, and established branding during visual polish. Changes to those belong to a broader design task.
+
 ### 3. Define a specific visual thesis
 
 Write one internal sentence that connects the product to the visual treatment, for example: “A field recorder should feel immediate, dark, and instrument-like, with the live waveform owning the screen.” Use it to decide density, color, shape, type, and motion.
@@ -76,6 +79,7 @@ Before finishing, verify:
 - Touch targets, contrast, labels, focus order, reduced motion, and reduced transparency are covered.
 - Motion explains cause, destination, or state instead of decorating idle UI.
 - The result still has product identity with effects, gradients, and mockup imagery removed.
+- For existing-screen work, compare equivalent before-and-after states, revisit the original findings, and check shared components affected by the edit. Distinguish verified behavior from checks that could not be run.
 
 ## Non-negotiable boundaries
 
